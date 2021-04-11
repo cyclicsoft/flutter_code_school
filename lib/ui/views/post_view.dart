@@ -5,6 +5,7 @@ import 'package:flutter_code_school/ui/shared/app_color.dart';
 import 'package:flutter_code_school/ui/shared/text_styles.dart';
 import 'package:flutter_code_school/ui/shared/ui_helpers.dart';
 import 'package:flutter_code_school/ui/widgets/comments.dart';
+import 'package:flutter_code_school/ui/widgets/like_button.dart';
 import 'package:provider/provider.dart';
 
 class PostView extends StatelessWidget {
@@ -28,6 +29,7 @@ class PostView extends StatelessWidget {
             ),
             UIHelper.verticalSpaceMedium(),
             Text(post.body),
+            LikeButton(postId: post.id,),
             Comments(post.id)
           ],
         ),
